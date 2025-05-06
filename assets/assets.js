@@ -89,7 +89,7 @@ export const workData = [
         title: 'Portfolio website',
         description: 'My personal portfolio website',
         bgImage: '/work-1.png',
-        link: ''
+        link: 'https://pirunthapan.vercel.app'
     },
     {
         title: 'Power Smart',
