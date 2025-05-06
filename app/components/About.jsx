@@ -9,7 +9,7 @@ const About = ({isDarkMode}) => {
     initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       transition={{duration: 1}}
-    id='about' className='w-full px-[12%] py-10 scroll-mt-10'>
+    id='about' className='w-full max-w-7xl mx-auto px-[6%] py-10 scroll-mt-10'>
 
       <motion.h4 
       initial={{y: -20, opacity: 0}}
@@ -29,7 +29,7 @@ const About = ({isDarkMode}) => {
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       transition={{duration: 0.8}}
-      className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+      className='flex w-full flex-col lg:flex-row items-center gap-10 lg:gap-20 my-20'>
 
         <motion.div 
         initial={{scale: 0.9, opacity: 0}}
@@ -54,7 +54,7 @@ const About = ({isDarkMode}) => {
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{duration: 0.8, delay: 1}}
-            className='grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl'>
+            className='grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-2 gap-6 max-w-2xl'>
                 {infoList.map(({icon, iconDark, title, description}, index) => (
                     <motion.li 
                     whileHover={{scale:1.05}}
@@ -77,7 +77,7 @@ const About = ({isDarkMode}) => {
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{duration: 0.6, delay: 1.5}}
-            className='flex items-center gap-3 sm:gap-5'>
+            className='flex flex-wrap items-center gap-3 sm:gap-5'>
                 {toolsData.map((tool, index) => (
                     <motion.li 
                     whileHover={{scale: 1.1}}
