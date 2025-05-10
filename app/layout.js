@@ -1,5 +1,6 @@
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import {GoogleAnalytics} from "@next/third-parties/google";
 
 const outfit = Outfit({
   subsets: ["latin"], weight: ["400", "500", "600", "700"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       >
         {children}
       </body>
+      <GoogleAnalytics gaId="G-75NYCV657M"/>
     </html>
   );
 }
