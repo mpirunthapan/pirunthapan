@@ -17,6 +17,20 @@ const ovo = Ovo({
 export const metadata = {
   title: "Pirunthapan - Portfolio",
   description: "Portfolio website of Pirunthapan Murugaiah",
+  OpenGraph: {
+    title: "Pirunthapan - Portfolio",
+    description: "Portfolio website of Pirunthapan Murugaiah",
+    url: "https://pirunthapan.vercel.app",
+    siteName: "Pirunthapan - Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pirunthapan - Portfolio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -40,6 +54,37 @@ export default function RootLayout({ children }) {
                 page_path: window.location.pathname,
               });
             `,
+          }}
+        />
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Pirunthapan - Portfolio",
+              url: "https://pirunthapan.vercel.app",
+              sameAs: [
+                "https://www.linkedin.com/in/pirunthapan-murugaiah",
+                "https://github.com/mpirunthapan",
+                "https://www.instagram.com/pirunthapan_m/"
+              ],
+              description: "Portfolio website of Pirunthapan Murugaiah",
+              jobTitle: "Software Engineer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Pirunthapan Murugaiah",
+                name: "Freelance",
+                url: "https://pirunthapan.vercel.app",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://pirunthapan.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
           }}
         />
       </head>
