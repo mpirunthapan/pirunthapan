@@ -109,8 +109,14 @@ export default function RootLayout({ children }) {
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
         {/* Google Tag Manager (noscript) */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDD7H4D7"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript>
+          <iframe 
+          src="https://www.googletagmanager.com/ns.html?id=GTM-NDD7H4D7"
+          height="0" 
+          width="0" 
+          style={{display:"none", visibility:"hidden"}}
+          ></iframe>
+        </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
       </body>
